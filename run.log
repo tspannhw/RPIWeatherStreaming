@@ -1,0 +1,103 @@
+2025-12-09 14:43:41,725 [INFO] __main__ - PRODUCTION MODE: Real Weather HAT + Snowpipe Streaming REST API only
+2025-12-09 14:43:41,725 [INFO] __main__ - ======================================================================
+2025-12-09 14:43:41,725 [INFO] __main__ - Weather HAT Streaming Application - PRODUCTION MODE
+2025-12-09 14:43:41,725 [INFO] __main__ - Raspberry Pi Weather HAT -> Snowflake via Snowpipe Streaming v2
+2025-12-09 14:43:41,725 [INFO] __main__ - ======================================================================
+2025-12-09 14:43:41,726 [INFO] __main__ - PRODUCTION CONFIGURATION:
+2025-12-09 14:43:41,726 [INFO] __main__ -   - Real Weather HAT sensor data ONLY
+2025-12-09 14:43:41,726 [INFO] __main__ -   - Snowpipe Streaming high-speed REST API ONLY
+2025-12-09 14:43:41,726 [INFO] __main__ -   - Asynchronous sensor reading for maximum performance
+2025-12-09 14:43:41,726 [INFO] __main__ - ======================================================================
+2025-12-09 14:43:41,726 [INFO] __main__ - Initializing REAL Weather HAT...
+2025-12-09 14:43:41,726 [INFO] weather_sensor - PRODUCTION MODE: Real sensors required and enforced
+2025-12-09 14:43:41,819 [INFO] weather_sensor - Weather HAT sensor initialized
+2025-12-09 14:43:41,819 [INFO] weather_sensor - Weather HAT initialized successfully
+2025-12-09 14:43:41,819 [INFO] weather_sensor - [OK] Sensor verification passed - Weather HAT available
+2025-12-09 14:43:41,820 [INFO] weather_sensor - Weather sensor update loop started
+2025-12-09 14:43:41,820 [INFO] weather_sensor - Background weather sensor update thread started (updates every 5 seconds)
+2025-12-09 14:43:41,821 [INFO] __main__ - Initializing Snowpipe Streaming REST API client...
+2025-12-09 14:43:41,821 [INFO] thermal_streaming_client - ======================================================================
+2025-12-09 14:43:41,822 [INFO] thermal_streaming_client - SNOWPIPE STREAMING CLIENT - PRODUCTION MODE
+2025-12-09 14:43:41,822 [INFO] thermal_streaming_client - Using ONLY Snowpipe Streaming v2 REST API
+2025-12-09 14:43:41,822 [INFO] thermal_streaming_client - NO direct inserts - HIGH-PERFORMANCE STREAMING ONLY
+2025-12-09 14:43:41,822 [INFO] thermal_streaming_client - ======================================================================
+2025-12-09 14:43:41,823 [INFO] thermal_streaming_client - Loaded configuration from snowflake_config.json
+2025-12-09 14:43:41,823 [INFO] snowflake_jwt_auth - PAT authentication initialized for user: THERMAL_STREAMING_USER
+2025-12-09 14:43:41,824 [INFO] thermal_streaming_client - SnowpipeStreamingClient initialized
+2025-12-09 14:43:41,824 [INFO] thermal_streaming_client - Database: DEMO
+2025-12-09 14:43:41,824 [INFO] thermal_streaming_client - Schema: DEMO
+2025-12-09 14:43:41,825 [INFO] thermal_streaming_client - Table: WEATHER_DATA
+2025-12-09 14:43:41,825 [INFO] thermal_streaming_client - Channel: WTHR_CHNL_20251209_144341
+2025-12-09 14:43:41,825 [INFO] __main__ - Initialization complete
+2025-12-09 14:43:41,826 [INFO] __main__ - Batch size: 1000 readings
+2025-12-09 14:43:41,826 [INFO] __main__ - Batch interval: 100.0 seconds
+2025-12-09 14:43:41,826 [INFO] __main__ - FAST MODE: Enabled for maximum throughput
+2025-12-09 14:43:41,826 [INFO] __main__ - Local hostname: weather
+2025-12-09 14:43:41,827 [INFO] __main__ - Local IP: 192.168.1.193
+2025-12-09 14:43:41,827 [INFO] __main__ - Setting up Snowpipe Streaming connection...
+2025-12-09 14:43:41,827 [INFO] __main__ - Discovering ingest host...
+2025-12-09 14:43:41,827 [INFO] thermal_streaming_client - Discovering ingest host...
+2025-12-09 14:43:41,828 [INFO] thermal_streaming_client - Obtaining new scoped token...
+2025-12-09 14:43:41,828 [INFO] snowflake_jwt_auth - Using Programmatic Access Token (PAT)
+2025-12-09 14:43:41,828 [INFO] thermal_streaming_client - New scoped token obtained
+2025-12-09 14:43:42,342 [INFO] thermal_streaming_client - Ingest host discovered: X.ingest.iadaax.snowflakecomputing.com
+2025-12-09 14:43:42,342 [INFO] __main__ - [OK] Ingest host: X.ingest.iadaax.snowflakecomputing.com
+2025-12-09 14:43:42,342 [INFO] __main__ - Opening streaming channel...
+2025-12-09 14:43:42,343 [INFO] thermal_streaming_client - Opening channel: WTHR_CHNL_20251209_144341
+2025-12-09 14:43:43,136 [INFO] thermal_streaming_client - Channel opened successfully
+2025-12-09 14:43:43,137 [INFO] thermal_streaming_client - Continuation token: 0_1
+2025-12-09 14:43:43,137 [INFO] thermal_streaming_client - Initial offset token: 0
+2025-12-09 14:43:43,138 [INFO] __main__ - [OK] Channel opened successfully
+2025-12-09 14:43:43,138 [INFO] __main__ - Snowpipe Streaming connection ready!
+2025-12-09 14:43:43,139 [INFO] __main__ - ======================================================================
+2025-12-09 14:43:43,139 [INFO] __main__ - Starting weather data collection and streaming...
+2025-12-09 14:43:43,139 [INFO] __main__ - Press Ctrl+C to stop
+2025-12-09 14:43:43,140 [INFO] __main__ - ======================================================================
+2025-12-09 14:43:43,140 [INFO] __main__ - 
+--- Batch 1 ---
+2025-12-09 14:43:43,141 [INFO] __main__ - Reading 1000 weather sensor samples...
+2025-12-09 14:44:33,571 [INFO] __main__ - Sample reading: Temp=59.4°F, Humidity=79.2%, Pressure=693.07hPa, Lux=48.86
+2025-12-09 14:44:33,571 [INFO] __main__ - Local hostname: weather
+2025-12-09 14:44:33,572 [INFO] thermal_streaming_client - Appending 1000 rows...
+2025-12-09 14:44:34,001 [INFO] thermal_streaming_client - Successfully appended 1000 rows
+2025-12-09 14:44:34,001 [INFO] __main__ - [OK] Successfully sent 1000 readings to Snowpipe Streaming
+2025-12-09 14:44:34,002 [INFO] __main__ - Waiting 49.1s until next batch...
+2025-12-09 14:45:23,190 [INFO] __main__ - 
+--- Batch 2 ---
+2025-12-09 14:45:23,190 [INFO] __main__ - Reading 1000 weather sensor samples...
+2025-12-09 14:46:07,227 [INFO] __main__ - 
+Received signal 2, shutting down gracefully...
+2025-12-09 14:46:13,623 [INFO] __main__ - Sample reading: Temp=78.7°F, Humidity=12.2%, Pressure=1014.73hPa, Lux=23.85
+2025-12-09 14:46:13,625 [INFO] __main__ - Local hostname: weather
+2025-12-09 14:46:13,626 [INFO] thermal_streaming_client - Appending 1000 rows...
+2025-12-09 14:46:13,993 [INFO] thermal_streaming_client - Successfully appended 1000 rows
+2025-12-09 14:46:13,994 [INFO] __main__ - [OK] Successfully sent 1000 readings to Snowpipe Streaming
+2025-12-09 14:46:13,994 [INFO] __main__ - 
+======================================================================
+2025-12-09 14:46:13,995 [INFO] __main__ - Shutting down...
+2025-12-09 14:46:13,995 [INFO] __main__ - ======================================================================
+2025-12-09 14:46:13,996 [INFO] thermal_streaming_client - ============================================================
+2025-12-09 14:46:13,996 [INFO] thermal_streaming_client - INGESTION STATISTICS
+2025-12-09 14:46:13,996 [INFO] thermal_streaming_client - ============================================================
+2025-12-09 14:46:13,997 [INFO] thermal_streaming_client - Total rows sent: 2000
+2025-12-09 14:46:13,997 [INFO] thermal_streaming_client - Total batches: 2
+2025-12-09 14:46:13,998 [INFO] thermal_streaming_client - Total bytes sent: 1,141,903
+2025-12-09 14:46:13,998 [INFO] thermal_streaming_client - Errors: 0
+2025-12-09 14:46:13,998 [INFO] thermal_streaming_client - Elapsed time: 152.17 seconds
+2025-12-09 14:46:13,999 [INFO] thermal_streaming_client - Average throughput: 13.14 rows/sec
+2025-12-09 14:46:13,999 [INFO] thermal_streaming_client - Current offset token: 2
+2025-12-09 14:46:13,999 [INFO] thermal_streaming_client - ============================================================
+2025-12-09 14:46:14,000 [INFO] __main__ - Closing streaming channel...
+2025-12-09 14:46:14,000 [INFO] thermal_streaming_client - Closing channel: WTHR_CHNL_20251209_144341
+2025-12-09 14:46:14,001 [INFO] thermal_streaming_client - Channel will auto-close after inactivity period
+2025-12-09 14:46:14,001 [INFO] __main__ - [OK] Channel closed
+2025-12-09 14:46:14,001 [INFO] __main__ - Cleaning up sensor...
+2025-12-09 14:46:14,002 [INFO] weather_sensor - Cleaning up weather sensor...
+2025-12-09 14:46:14,002 [INFO] weather_sensor - Stopping background sensor update thread...
+2025-12-09 14:46:14,020 [INFO] weather_sensor - Weather sensor update loop exited
+2025-12-09 14:46:14,020 [INFO] weather_sensor - Background sensor update thread stopped
+2025-12-09 14:46:14,020 [INFO] weather_sensor - Weather sensor cleanup complete
+2025-12-09 14:46:14,021 [INFO] __main__ - [OK] Sensor cleaned up
+2025-12-09 14:46:14,021 [INFO] __main__ - Shutdown complete
+2025-12-09 14:46:14,023 [INFO] weather_sensor - Cleaning up weather sensor...
+2025-12-09 14:46:14,024 [INFO] weather_sensor - Weather sensor cleanup complete
