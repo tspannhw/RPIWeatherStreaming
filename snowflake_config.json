@@ -1,0 +1,12 @@
+{
+  "user": "THERMAL_STREAMING_USER",
+  "account": "ORGANIZATION-ACCOUNTNAME",
+  "url": "https://ORGANIZATION-ACCOUNTNAME.snowflakecomputing.com",
+  "pat": "ProgrammaticAccessTokenIsVeryLongString",
+  "role": "CREATEANDUSEASPECIALROLE",
+  "database": "DBNAME",
+  "schema": "SCEHMANAME",
+  "table": "WEATHER_DATA",
+  "pipe": "WEATHER_SENSOR_PIPE",
+  "channel_name": "WTHR_CHNL"
+}
